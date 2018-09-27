@@ -38,11 +38,11 @@
             //this.map = $('#' + this.options.target).data('mapbenderMbMap');
 
             $('#cmb1', this.element)
-                .on('change', $.proxy(this._buscarZonas, this));
+                .on('change', $.proxy(this._buscarZ, this));
             $('#cmb2', this.element)
-                .on('change', $.proxy(this._buscarSubestaciones, this));
+                .on('change', $.proxy(this._buscarS, this));
             $('#cmb3', this.element)
-                .on('change', $.proxy(this._buscarCircuitos, this));
+                .on('change', $.proxy(this._buscarC, this));
 
             this._trigger('ready');
             this._ready();
@@ -94,7 +94,7 @@
             }
         },
 
-        _buscarZonas: function(){
+        _buscarZ: function(){
             $('#cmb2', this.element).empty();
             $('#cmb3', this.element).empty();
             $('#cmb4', this.element).empty();
@@ -116,7 +116,7 @@
               });
         },
 
-        _buscarSubestaciones: function(){
+        _buscarS: function(){
             $('#cmb3', this.element).empty();
             $('#cmb4', this.element).empty();
             var self=this;
@@ -137,7 +137,7 @@
               });
         },
 
-        _buscarCircuitos: function(){
+        _buscarC: function(){
             $('#cmb4', this.element).empty();
             var self=this;
             var sub=$('#cmb3', this.element).val();
